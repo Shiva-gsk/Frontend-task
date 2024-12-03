@@ -21,11 +21,11 @@ const Profile = () => {
     }
     const buttons = ["Daily", "Weekly", "Monthly"];
   return (
-    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl hover:scale-105 cursor-pointer'>
+    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl hover:scale-[101%] cursor-pointer'>
       <div className='h-[65%] bg-[#5746EA] p-5 py-7 rounded-xl'>
 
         {/* profile */}
-        <div className='w-[45%] h-[30%] bg-white rounded-full flex justify-center items-center'>
+        <div className='md:w-[45%] md:h-[30%]h-[30%] w-[25%] bg-white rounded-full flex justify-center items-center'>
             <div className=' w-[93%] '>
                 <img src={profile} alt="" />
 
@@ -41,7 +41,7 @@ const Profile = () => {
 
       </div>
 
-      <div className='text-[#6A6EAE] p-8 gap-3 px-6 flex flex-col items-start justify-center font-mono text-sm'>
+      <div className='text-[#6A6EAE] sm:p-8 p-4 gap-3 px-6 flex sm:flex-col items-start justify-center font-mono text-sm'>
       {/* <button onClick={handleClick} className='hover:text-white '>Daily</button>
       <button onClick={handleClick} className='hover:text-white active:text-white'>Weekly</button>
       <button onClick={handleClick} className='hover:text-white active:text-white'>Monthly</button> */}
