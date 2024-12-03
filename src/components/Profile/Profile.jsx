@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react';
 import profile from'../../../images/image-jeremy.png'
+import {menuContext} from '../../Context/menuContext';
 
 const Profile = () => {
-    const [activeButton, setActiveButton] = useState(null);
+    const {setItem} = useContext(menuContext);
+    const [activeButton, setActiveButton] = useState(1);
     const handleClick= (index) => {
+      if(index == 0){
+        setItem("daily");
+      }
+      else if(index == 1){
+        setItem('weekly');
+      }
+      else{
+        setItem("monthly")
+      }
         setActiveButton(index);
         console.log(activeButton);
     }
     const buttons = ["Daily", "Weekly", "Monthly"];
   return (
-    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl'>
+    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl hover:scale-105'>
       <div className='h-[65%] bg-[#5746EA] p-5 py-7 rounded-xl'>
 
         {/* profile */}
@@ -38,6 +49,7 @@ const Profile = () => {
         {buttons.map((button, index) => (
             <button
             key={index}
+            className={`hover:text-white ${(activeButton == index)?"text-white":""} active:text-white`}
             onClick={() => handleClick(index)} // Pass the index to handler
             >
             {button}
