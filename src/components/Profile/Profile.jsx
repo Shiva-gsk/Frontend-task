@@ -21,7 +21,7 @@ const Profile = () => {
     }
     const buttons = ["Daily", "Weekly", "Monthly"];
   return (
-    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl hover:scale-105'>
+    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl hover:scale-105 cursor-pointer'>
       <div className='h-[65%] bg-[#5746EA] p-5 py-7 rounded-xl'>
 
         {/* profile */}
