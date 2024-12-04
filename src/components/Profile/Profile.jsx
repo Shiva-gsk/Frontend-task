@@ -5,7 +5,7 @@ import {menuContext} from '../../Context/menuContext';
 
 const Profile = () => {
     const {setItem} = useContext(menuContext);
-    const [activeButton, setActiveButton] = useState(1);
+    const [activeButton, setActiveButton] = useState(0);
     const handleClick= (index) => {
       if(index == 0){
         setItem("daily");
@@ -21,8 +21,8 @@ const Profile = () => {
     }
     const buttons = ["Daily", "Weekly", "Monthly"];
   return (
-    <div className='w-[100%] h-[100%] bg-[#1D204B] rounded-xl hover:scale-[101%] cursor-pointer'>
-      <div className='h-[65%] bg-[#5746EA] p-5 py-7 rounded-xl'>
+    <div className='w-[100%] sm:h-[100%] bg-[#1D204B] rounded-xl hover:scale-[101%] cursor-pointer'>
+      <div className='h-[65%] bg-[#5746EA] p-5 py-7 rounded-xl flex sm:flex-col'>
 
         {/* profile */}
         <div className='md:w-[45%] md:h-[30%]h-[30%] w-[25%] bg-white rounded-full flex justify-center items-center'>
@@ -34,7 +34,7 @@ const Profile = () => {
 
         {/* Name */}
 
-        <div className='py-8 text-3xl text-white font-mono'>
+        <div className='py-8 text-3xl text-white font-mono sm:w-[100%] w-[50%]'>
             <p className='text-xs text-[#75a3a3] font-sans font-semibold'>Report for</p>
             Jermy Robson
         </div>
@@ -49,7 +49,7 @@ const Profile = () => {
         {buttons.map((button, index) => (
             <button
             key={index}
-            className={`hover:text-white ${(activeButton == index)?"text-white":""} active:text-white`}
+            className={`hover:text-white ${(activeButton == index)?"text-white":""} `}
             onClick={() => handleClick(index)} // Pass the index to handler
             >
             {button}
