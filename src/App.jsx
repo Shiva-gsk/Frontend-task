@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <menuContext.Provider value ={{item, setItem}}>
-      <div className="sm:flex justify-center my-20 sm:gap-[1.5%] h-[70vh] grid grid-cols-1 ap-[50%] sm:w-[100%]">
+      <div className="sm:flex justify-center my-20 sm:gap-[1.5%] h-[70vh] max-h-[500px] grid grid-cols-1 ap-[50%] sm:w-[100%]">
         <div className="xl:w-[14%] sm:w-[23%] h-[100%] flex justify-center items-center flex-shrink-0 w-[85%] mx-auto sm:m-0">
           <Profile />
         </div>
