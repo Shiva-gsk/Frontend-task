@@ -16,7 +16,7 @@ const Card = ({ index }) => {
     <>
       <div className="">
         <div
-          className={`absolute bg-[${color[index]}] w-[100%] sm:w-[29%] sm:h-[45%] max-h-600px text-3xl rounded-xl contain-content min-w-[120px] hover:scale-[101%]`}
+          className={`absolute bg-[${color[index]}] w-[100%] sm:w-[29%] sm:h-[48%] max-h-600px text-3xl rounded-xl contain-content min-w-[120px] hover:scale-[101%]`}
           style={{ backgroundColor: color[index] }}
         >
           <div className="relative left-[60%] z-[1] ">
