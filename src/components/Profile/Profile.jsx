@@ -25,7 +25,7 @@ const Profile = () => {
       <div className='h-[65%] bg-[#5746EA] p-5 py-7 rounded-xl flex sm:flex-col'>
 
         {/* profile */}
-        <div className='md:w-[45%] md:h-[30%]h-[30%] w-[25%] bg-white rounded-full flex justify-center items-center'>
+        <div className='sm:w-[45%] sm:h-[30%] h-[30%] w-[25%] bg-white rounded-full flex justify-center items-center'>
             <div className=' w-[93%] '>
                 <img src={profile} alt="" />
 
@@ -34,7 +34,7 @@ const Profile = () => {
 
         {/* Name */}
 
-        <div className='py-8 text-3xl text-white font-mono sm:w-[100%] w-[50%]'>
+        <div className='sm:py-8 px-7 sm:px-0 text-3xl text-white font-mono sm:w-[100%] w-[50%]'>
             <p className='text-xs text-[#75a3a3] font-sans font-semibold'>Report for</p>
             Jermy Robson
         </div>
@@ -49,7 +49,7 @@ const Profile = () => {
         {buttons.map((button, index) => (
             <button
             key={index}
-            className={`hover:text-white ${(activeButton == index)?"text-white":""} `}
+            className={`hover:text-white sm:p-0 px-3 ${(activeButton == index)?"text-white":""} `}
             onClick={() => handleClick(index)} // Pass the index to handler
             >
             {button}
